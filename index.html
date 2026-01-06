@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -52,8 +52,10 @@ img {
 <body>
 
 <h1>Sorpresita 🎁</h1>
-<button id="abrirBtn" onclick="abrir()">Abrir</button>
-
+<button id="abrirBtn" onclick="abrir()">Ver momentos</button>
+<br><br><br><br>
+  <button id="abrirCarta" onclick="abrirCarta()">Ver cartita</button>
+  
 <div id="carta">
 <p>
 Nico, hoy quiero desearte un muy feliz 2026. Espero que hayas disfrutado los highlights de nuestro 2025, aunque cada momento a tu lado es hermoso, no importa cual. Por eso te quiero decir gracias. Gracias por acompañarme este año, por siempre sacarme una sonrisa, por escucharme y estar para mi. Sos el mejor compañero que puedo pedir. 
@@ -63,7 +65,7 @@ Te felicito por todos tus logros, como aprobar todas las materias y promocionar 
 También por cómo creciste como persona en todos los aspectos. Ya te lo dije varias veces pero me encanta ver como maduras y vas cambiando siempre para mejor. Entre más pasa el tiempo más me doy cuenta que te quiero conmigo toda la vida porque realmente te amo y me encanta todo de vos. 
 
 Espero que este año cumplas todas tus metas. Sabes que yo siempre voy a estar con vos, acompañándote y apoyándote en todo lo que pueda. Que te vaya super bien en la facu, que puedas comprarte el auto que tanto soñas (o bueno de todos los que soñas el más posible ahora jeje) y que seas feliz en general. 
-
+ 
 Espero también como pareja pupupu, poder tener muchos momentos lindos juntos, viajes, salidas, viernes de pijamada (o sábados). Espero poder terminar la lista de pelis (sin dormirme en ninguna), cocinar más, cantar muchas canciones en el auto, reírnos mucho y pelearnos poquito.
 
 Te amo muchísimo mi amor, espero pasar estos 365 días con vos, y toda mi vida.
@@ -105,16 +107,19 @@ let intervalo;
 
 function abrir() {
   const ahora = new Date();
-  document.getElementById("abrirBtn").style.display = "none";
-
-  if (True) {
+  document.getElementById("abrirCarta").style.display = "none"; 
+  document.getElementById("abrirBtn").style.display = "none"; 
+  if (true) {
     const b = document.createElement("button");
     b.innerText = "Todavía no… pero podés ver los mejores momentos de 2025 💖";
     b.onclick = mostrarMemories;
     document.body.appendChild(b);
   }
 }
-
+function abrirCarta(){
+    document.getElementById("abrirBtn").style.display = "none";
+  document.getElementById("abrirCarta").style.display = "none"; document.getElementById("carta").style.display = "block";
+}
 function mostrarMemories() {
   document.getElementById("memories").style.display = "block";
 
